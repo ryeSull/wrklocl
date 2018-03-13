@@ -19,19 +19,19 @@
     <link href="css/animate.min.css" rel="stylesheet">
   </head>
 <body>
-<div class="navbar navbar-invers menu-wrap">
+<nav class="navbar navbar-inverse menu-wrap">
   <div class="navbar-header text-center">
-      <a class="navbar-brand logo-right" href="index.html#home"></i>WorkLocal</a>
+      <a class="navbar-brand logo-right" href="index.html#home">WorkLocal</a>
   </div>
     <ul class="nav navbar-nav main-navigation">
-      <li class="active"><a href="#home">Back to the Top</a></li>
-      <li><a href="#solutions">Solutions</a></li>
-      <li><a href="#why">Why WorkLocal?</a></li>
-      <li><a href="#main-features">About</a></li>
-      <li><a href="#contactus">Contact Us</a></li>
+      <li class="active"><a href="#home" onClick="hideBitch()">Home</a></li>
+      <li><a href="#features" onClick="hideBitch()">Solutions</a></li>
+      <li><a href="#why" onClick="hideBitch()">Why WorkLocal?</a></li>
+      <li><a href="#main-features" onClick="hideBitch()">About</a></li>
+      <li><a href="#contactus" onClick="hideBitch()">Contact Us</a></li>
     </ul>
   <button class="close-button" id="close-button">Close Menu</button>
-</div>
+</nav>
 <div class="content-wrap">
 <header class="hero-area" id="home">
   <div class="container">
@@ -230,6 +230,7 @@
     <script src="js/classie.js"></script>
     <script src="js/jquery.nav.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/nav_collapse.js"></script>
     <script>
         $(document).ready(function() {
             // This command is used to initialize some elements and make them work properly
