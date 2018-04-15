@@ -17,12 +17,13 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
   </head>
 <body>
-<nav class="navbar navbar-inverse menu-wrap">
-  <div class="navbar-header text-center">
-      <a class="navbar-brand logo-right" href="index.html#home" onClick="hideNav()">WorkLocal</a>
-  </div>
+  <nav class="navbar navbar-inverse menu-wrap" id="want-it-darker">
+    <div class="navbar-header text-center">
+        <a class="navbar-brand logo-right" href="index.html#home" onClick="hideNav()">WorkLocal</a>
+    </div>
     <ul class="nav navbar-nav main-navigation">
       <li class="active"><a href="index.html#home" onClick="hideNav()">Home</a></li>
       <li><a href="index.html#solutions" onClick="hideNav()">Solutions</a></li>
@@ -30,23 +31,25 @@
       <li><a href="index.html#main-features" onClick="hideNav()">About</a></li>
       <li><a href="index.html#contactus" onClick="hideNav()">Contact Us</a></li>
     </ul>
-  <button class="close-button" id="close-button">Close Menu</button>
-</nav>
+    <button class="close-button" id="close-button">Close Menu</button>
+  </nav>
 <div class="content-wrap">
   <header class="hero-area" id="home">
     <div class="container">
       <div class="col-md-12">
-        <div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
+        <nav class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
           <div class="container">
             <div class="navbar-header">
-              <a class="logo-left " href="index.html#home"><h4>WorkLocal</h4></a>
+              <span class="icon">
+                <a class="logo-left fa fa-connectdevelop" id="connect-icon" href="index.html#home"></a>
+              </span>
             </div>
             <div class="navbar-right">
               <button class="menu-icon"  id="open-button">
               <i class="mdi-navigation-menu"></i></button>
             </div>
           </div>
-        </div>
+        </nav>
       </div>
       <div class="contents text-right">
       <!-- heading for later <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">WorkLocal</h1> ---->
@@ -230,7 +233,7 @@
     <script src="js/classie.js"></script>
     <script src="js/jquery.nav.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/nav_collapse.js"></script>
+    <script src="js/custom_nav.js"></script>
     <script>
         $(document).ready(function() {
             // This command is used to initialize some elements and make them work properly
