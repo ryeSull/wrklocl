@@ -20,9 +20,13 @@ $(window).scroll(function() {
     if (navClass.includes('affix-top') === false){
       connectIcon.style.display = 'block';
       navbar.childNodes[1].setAttribute('id', 'want-it-darker');
+      navbar.setAttribute('id', 'want-it-darker');
+      $('#open-button').show();
     } else {
       connectIcon.style.display = 'none'
       navbar.childNodes[1].setAttribute('id', '');
+      navbar.setAttribute('id', '');
+      $('#open-button').hide();
     }
   } else if (hideDarkTopNav.called === true) {
     hideDarkTopNav.called = false
@@ -32,6 +36,8 @@ $(window).scroll(function() {
 let hideDarkTopNav = () => {
   connectIcon.style.display = 'none'
   navbar.childNodes[1].setAttribute('id', '');
+  navbar.setAttribute('id', '');
+  $('#open-button').hide();
 
   hideDarkTopNav.called = true;
 };
