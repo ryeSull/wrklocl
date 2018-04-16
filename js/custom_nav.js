@@ -5,7 +5,18 @@ let navbar = document.getElementsByClassName(
 )[0];
 let navClass = navbar.className;
 
-function hideSideNav() {
+let hideDarkTopNav = () => {
+  connectIcon.style.display = 'none'
+  navbar.childNodes[1].setAttribute('id', '');
+  navbar.setAttribute('id', '');
+  $('#open-button').hide();
+
+  hideDarkTopNav.called = true;
+};
+
+connectIcon.addEventListener('click', hideDarkTopNav);
+
+let hideSideNav = () => {
     closeButton.click();
     hideDarkTopNav();
 };
@@ -33,15 +44,3 @@ $(window).scroll(function() {
     hideDarkTopNav.called = false
   }
 });
-
-let hideDarkTopNav = () => {
-  connectIcon.style.display = 'none'
-  navbar.childNodes[1].setAttribute('id', '');
-  navbar.setAttribute('id', '');
-  $('#open-button').hide();
-
-  hideDarkTopNav.called = true;
-};
-
-
-connectIcon.addEventListener('click', hideDarkTopNav);
