@@ -1,11 +1,17 @@
 #want-it-darker {
   background-color: #191919;
+  width: 100%;
+}
+
+#want-side-darker {
+  background-color: #191919;
 }
 
 #connect-icon {
   display: none;
 }
 
+/* use this if we want icon with text */
 /* span.icon:after {
   font-family: FontAwesome;
   content: "\f015";
