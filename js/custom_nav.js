@@ -1,46 +1,38 @@
 let closeButton = document.getElementById("close-button");
 let connectIcon = document.getElementById('connect-icon');
-let navbar = document.getElementsByClassName(
-  'navbar navbar-inverse sticky-navigation navbar-fixed-top'
-)[0];
-let navClass = navbar.className;
 
-let hideDarkTopNav = () => {
-  connectIcon.style.display = 'none'
-  navbar.childNodes[1].setAttribute('id', '');
-  navbar.setAttribute('id', '');
+let hideTopbarIcons = () => {
+  connectIcon.style.display = 'none';
   $('#open-button').hide();
 
-  hideDarkTopNav.called = true;
+  hideTopbarIcons.called = true;
 };
 
-connectIcon.addEventListener('click', hideDarkTopNav);
+let showTopbarIcons = () => {
+  connectIcon.style.display = 'block';
+  $('#open-button').show();
+};
+
+connectIcon.addEventListener('click', hideTopbarIcons);
 
 let hideSideNav = () => {
     closeButton.click();
-    hideDarkTopNav();
+    hideTopbarIcons();
 };
 
 $(window).scroll(function() {
-  let connect = document.getElementById('connect-icon');
-  let topNav = document.getElementsByClassName(
+  let topbar = document.getElementsByClassName(
     'navbar navbar-inverse sticky-navigation navbar-fixed-top'
   )[0];
-  let topNavClass = navbar.className;
+  let topbarClass = topbar.className;
 
-  if (hideDarkTopNav.called === undefined || hideDarkTopNav.called === false) {
-    if (topNavClass.includes('affix-top') === false){
-      connect.style.display = 'block';
-      topNav.childNodes[1].setAttribute('id', 'want-it-darker');
-      topNav.setAttribute('id', 'want-it-darker');
-      $('#open-button').show();
+  if (hideTopbarIcons.called === undefined || hideTopbarIcons.called === false) {
+    if (topbarClass.includes('affix-top') === false){
+      showTopbarIcons();
     } else {
-      connect.style.display = 'none'
-      topNav.childNodes[1].setAttribute('id', '');
-      topNav.setAttribute('id', '');
-      $('#open-button').hide();
+      hideTopbarIcons();
     }
-  } else if (hideDarkTopNav.called === true) {
-    hideDarkTopNav.called = false
+  } else if (hideTopbarIcons.called === true) {
+    hideTopbarIcons.called = false
   }
 });
