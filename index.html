@@ -17,42 +17,45 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
   </head>
 <body>
-<nav class="navbar navbar-inverse menu-wrap">
-  <div class="navbar-header text-center">
-      <a class="navbar-brand logo-right" href="index.html#home" onClick="hideBitch()">WorkLocal</a>
-  </div>
+  <nav class="navbar navbar-inverse menu-wrap" id='side-navbar'>
+    <div class="navbar-header text-center">
+        <a class="navbar-brand logo-right" href="index.html#home" onClick="hideSideNav()">WorkLocal</a>
+    </div>
     <ul class="nav navbar-nav main-navigation">
-      <li class="active"><a href="index.html#home" onClick="hideBitch()">Home</a></li>
-      <li><a href="index.html#solutions" onClick="hideBitch()">Solutions</a></li>
-      <li><a href="index.html#why" onClick="hideBitch()">Why WorkLocal?</a></li>
-      <li><a href="index.html#main-features" onClick="hideBitch()">About</a></li>
-      <li><a href="index.html#contactus" onClick="hideBitch()">Contact Us</a></li>
+      <li class="active"><a href="index.html#home" onClick="hideSideNav()">Home</a></li>
+      <li><a href="index.html#solutions" onClick="hideSideNav()">Solutions</a></li>
+      <li><a href="index.html#why" onClick="hideSideNav()">Why WorkLocal?</a></li>
+      <li><a href="index.html#main-features" onClick="hideSideNav()">About</a></li>
+      <li><a href="index.html#contactus" onClick="hideSideNav()">Contact Us</a></li>
     </ul>
-  <button class="close-button" id="close-button">Close Menu</button>
-</nav>
+    <button class="close-button" id="close-button">Close Menu</button>
+  </nav>
 <div class="content-wrap">
   <header class="hero-area" id="home">
     <div class="container">
       <div class="col-md-12">
-        <div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
+        <nav class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
           <div class="container">
             <div class="navbar-header">
-              <a class="logo-left " href="index.html#home"><h4>WorkLocal</h4></a>
+              <span class="icon">
+                <a class="logo-left fa fa-connectdevelop" id="connect-icon" href="index.html#home"></a>
+              </span>
             </div>
             <div class="navbar-right">
-              <button class="menu-icon"  id="open-button">
+              <button class="menu-icon"  id="open-button" style="display: none;">
               <i class="mdi-navigation-menu"></i></button>
             </div>
           </div>
-        </div>
+        </nav>
       </div>
       <div class="contents text-right">
       <!-- heading for later <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">WorkLocal</h1> ---->
         <img src="img/png/logo_medium.png" alt="WorkLocalMA Logo">
         <p class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">Professional Workspace Solutions<br> for the South Shore.</p>
-        <a href="index.html#solutions" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">Learn More</a>
+        <a href="index.html#solutions" class="btn btn-lg btn-border wow fadeInUp" id="learn-more" data-wow-duration="1000ms" data-wow-delay="500ms">Learn More</a>
       </div>
     </div>
   </header>
@@ -230,7 +233,7 @@
     <script src="js/classie.js"></script>
     <script src="js/jquery.nav.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/nav_collapse.js"></script>
+    <script src="js/custom_nav.js"></script>
     <script>
         $(document).ready(function() {
             // This command is used to initialize some elements and make them work properly

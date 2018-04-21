@@ -1,0 +1,13 @@
+#side-navbar {
+  background-color: #191919 !important;
+}
+
+#connect-icon {
+  display: none;
+}
+
+/* use this if we want icon with text */
+/* span.icon:before {
+  font-family: FontAwesome;
+  content: "\f20e";
+} */
