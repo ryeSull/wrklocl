@@ -1,5 +1,6 @@
-let closeButton = document.getElementById("close-button");
+let closeButton = document.getElementById('close-button');
 let connectIcon = document.getElementById('connect-icon');
+let learnMoreBtn = document.getElementById('learn-more');
 
 let hideTopbarIcons = () => {
   connectIcon.style.display = 'none';
@@ -8,12 +9,14 @@ let hideTopbarIcons = () => {
   hideTopbarIcons.called = true;
 };
 
+connectIcon.addEventListener('click', hideTopbarIcons);
+
 let showTopbarIcons = () => {
   connectIcon.style.display = 'block';
   $('#open-button').show();
 };
 
-connectIcon.addEventListener('click', hideTopbarIcons);
+learnMoreBtn.addEventListener('click', showTopbarIcons);
 
 let hideSideNav = () => {
     closeButton.click();
